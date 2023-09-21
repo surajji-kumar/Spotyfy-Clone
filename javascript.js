@@ -2,7 +2,7 @@ console.log("Welcome to Spotify");
 
 // Initialize the Variables
 let songIndex=0;
-let audioElement = new Audio('songs/1.mp3');
+let audioElement = new Audio('1.mp3');
 let masterplay = document.getElementById('masterplay');
 let myprogressBar = document.getElementById('myProgressBar');
 let gif = document.getElementById('gif');
@@ -85,7 +85,7 @@ Array.from(document.getElementsByClassName('songitemPlay')).forEach((element) =>
         songIndex=parseInt(e.target.id)
    e.target.classList.remove('fa-play-circle');
    e.target.classList.add('fa-pause-circle');
-   audioElement.src = `songs/${songIndex+1}.mp3`;
+   audioElement.src = `${songIndex+1}.mp3`;
    audioElement.currentTime = 0;
    audioElement.play();
    masterplay.classList.remove('fa-play-circle');
@@ -100,7 +100,7 @@ document.getElementById('next').addEventListener('click',()=>{
     else{
         songIndex += 1
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
     audioElement.currentTime = 0;
     audioElement.play();
     masterplay.classList.remove('fa-play-circle');
@@ -114,7 +114,7 @@ document.getElementById('previous').addEventListener('click',()=>{
     else{
         songIndex -= 1
     }
-    audioElement.src = `songs/${songIndex+1}.mp3`;
+    audioElement.src = `${songIndex+1}.mp3`;
     audioElement.currentTime = 0;
     audioElement.play();
     masterplay.classList.remove('fa-play-circle');
